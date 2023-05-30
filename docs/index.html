@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <div id="title">
+    <h1>Sudoku Solver</h1>
+  </div>
+  <div id="page">
+    <div id="inputs">
+      <div id="digits">
+        <div class="row">
+          <div class="column boxed">
+            <div class="row">
+              <input type="text" id="num11" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num12" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num13" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num21" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num22" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num23" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num31" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num32" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num33" class="text-input" pattern="[0-9]+">
+            </div>
+          </div>
+          <div class="column">
+            <div class="row">
+              <input type="text" id="num14" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num15" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num16" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num24" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num25" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num26" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num34" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num35" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num36" class="text-input" pattern="[0-9]+">
+            </div>
+          </div>
+          <div class="column boxed">
+            <div class="row">
+              <input type="text" id="num17" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num18" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num19" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num27" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num28" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num29" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num37" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num38" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num39" class="text-input" pattern="[0-9]+">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="row">
+              <input type="text" id="num41" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num42" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num43" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num51" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num52" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num53" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num61" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num62" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num63" class="text-input" pattern="[0-9]+">
+            </div>
+          </div>
+          <div class="column boxed">
+            <div class="row">
+              <input type="text" id="num44" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num45" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num46" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num54" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num55" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num56" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num64" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num65" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num66" class="text-input" pattern="[0-9]+">
+            </div>
+          </div>
+          <div class="column">
+            <div class="row">
+              <input type="text" id="num47" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num48" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num49" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num57" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num58" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num59" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num67" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num68" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num69" class="text-input" pattern="[0-9]+">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column boxed">
+            <div class="row">
+              <input type="text" id="num71" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num72" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num73" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num81" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num82" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num83" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num91" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num92" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num93" class="text-input" pattern="[0-9]+">
+            </div>
+          </div>
+          <div class="column">
+            <div class="row">
+              <input type="text" id="num74" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num75" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num76" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num84" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num85" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num86" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num94" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num95" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num96" class="text-input" pattern="[0-9]+">
+            </div>
+          </div>
+          <div class="column boxed">
+            <div class="row">
+              <input type="text" id="num77" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num78" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num79" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num87" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num88" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num89" class="text-input" pattern="[0-9]+">
+            </div>
+            <div class="row">
+              <input type="text" id="num97" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num98" class="text-input" pattern="[0-9]+">
+              <input type="text" id="num99" class="text-input" pattern="[0-9]+">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="buttons">
+        <button id="solve" class="button">Solve</button>
+        <button id="clear" class="button">Clear</button>
+      </div>
+    </div>
+  </div>
+  <script src="./bootstrap.js"></script>
+  </body>
+</html>
